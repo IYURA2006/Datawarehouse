@@ -1,0 +1,19 @@
+@import "_reset.scss";
+@import "_mixin.scss";
+
+@font-face {
+	font-family: "Avenir";
+	src: url(/assets/fonts/avenir_ff/AvenirLTStd-Black.otf);
+}
+@font-face {
+    font-family: "Helvetica";
+    src: url(/assets/fonts/HelveticaBlack/);
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: $var1;
+}
+.wrapper{
+    max-width: 1250px;
+}
