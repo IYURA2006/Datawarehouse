@@ -1,19 +1,420 @@
 @import "_reset.scss";
-@import "_mixin.scss";
+
+
+/*-------MIXINS--------------*/
+$background: #E5E5E5;
+$text-color--aditional: #4B5D68;
+$text-color: #212353;
+$text-color--additional_3: #FFFFFF;
+$button_rgb: #9C69E2;
+$background_high-data: rgba(240, 99, 184, 0.15);
+.fa-long-arrow-alt-right{
+	color:$button_rgb;
+	margin-left: 20px;
+	font-size: 25px;
+}
+
+@mixin button_white {
+	background: $text-color--additional_3;
+	box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+	border-radius: 50px;
+	padding: 10px 29px;
+	&--text{
+		font-family: 'Avenir-Regular';
+		color: $text-color;
+	}
+}
+@mixin button_rgb {
+	background: $button_rgb;
+	box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+	border-radius: 50px;
+	padding: 16px 37px;
+	max-height: 60px;
+	max-height: 170px;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+	&::after {
+		content: '\279E';
+		position: absolute;
+		opacity: 0;  
+		top: 11px;
+		right: -10px;
+		transition: 0.5s;
+		font-size: 30px;
+		color: $text-color--additional_3;
+	  }
+	&:hover{
+		padding-right: 45px;
+		padding-left:15px;
+	  }
+	  
+	&:hover:after {
+		opacity: 1;
+		right: 10px;
+	  }
+}
 
 @font-face {
-	font-family: "Avenir";
-	src: url(/assets/fonts/avenir_ff/AvenirLTStd-Black.otf);
+	font-family: 'Avenir-Heavy';
+	src: url('../fonts/AvenirNextLTPro-HeavyCn.eot');
+	src: local('☺'), url('../fonts/AvenirNextLTPro-HeavyCn.woff') format('woff'), url('../fonts/AvenirNextLTPro-HeavyCn.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-HeavyCn.svg') format('svg');
+	font-weight: 800;
+	font-style: normal;
 }
 @font-face {
-    font-family: "Helvetica";
-    src: url(/assets/fonts/HelveticaBlack/);
+	font-family: 'Avenir-Medium';
+	src: url('../fonts/AvenirNextLTPro-MediumCn.eot');
+	src: local('☺'), url('../fonts/AvenirNextLTPro-MediumCn.woff') format('woff'), url('../fonts/AvenirNextLTPro-MediumCn.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-MediumCn.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
 }
+@font-face {
+	font-family: 'Avenir-Regular';
+	src: url('../fonts/AvenirNextLTPro-Regular.eot');
+	src: local('☺'), url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'), url('../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica-bold';
+	src: url('../fonts/aghelveticacyr_bold.eot');
+	src: local('☺'), url('../fonts/aghelveticacyr_bold.woff') format('woff'), url('../fonts/aghelveticacyr_bold.ttf') format('truetype'), url('../fonts/aghelveticacyr_bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica-roman';
+	src: url('../fonts/helveticaneuecyr-roman.eot');
+	src: local('☺'), url('../fonts/helveticaneuecyr-roman.woff') format('woff'), url('../fonts/helveticaneuecyr-roman.ttf') format('truetype'), url('../fonts/helveticaneuecyr-roman.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+
+
 body {
 	margin: 0;
 	padding: 0;
-	background: $var1;
+	background: $background;
 }
-.wrapper{
-    max-width: 1250px;
+.wrapper {
+	max-width: 1250px;
+	margin: 0 auto;
 }
+.nav {
+	max-width: 1120px;
+	display: flex;
+	align-items: center;
+	font-family: 'Avenir-Regular';
+	color: $text-color;
+	margin-top: 62px;
+	&__logo {
+		margin-right: 121px;
+	}
+	&__links {
+		margin-right: 40px;
+		color: $text-color--aditional;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 160%;
+		font-family: 'Avenir-Regular';
+
+		background-image: linear-gradient(currentColor, currentColor);
+		background-position: 0% 100%;
+		background-repeat: no-repeat;
+		background-size: 0% 2px;
+		transition: background-size .3s;
+
+		&:hover{
+			background-size: 100% 2px;
+		}
+	}
+	&__button {
+		margin-left: 378px;
+		@include button_white;
+	}
+}
+.active-page {
+	color: $text-color;
+}
+.header{
+	background: url(/assets/images/nav__image.png) no-repeat ;
+	background-position: right bottom;
+	max-height: 754px;
+
+	&__text{
+		margin-top: 147px;
+	
+	
+		
+		&--title{
+			font-family: 'Helvetica-bold';
+			max-width: 645px;
+			max-height: 184px;
+			font-size: 80px;
+			line-height: 110%;
+		}
+		&--paragraph{
+			margin-top: 50px;
+			max-width: 380px;
+			max-height: 120px;
+			font-family: 'Avenir-Regular';
+			font-size: 18px;
+			line-height: 160%;
+			color: $text-color--aditional;
+		}
+		&--button{
+			margin-top: 50px;
+			margin-bottom: 115px;
+			@include button_rgb;
+
+			&--text{
+				color: $text-color--additional_3;
+				font-size: 18px;
+				line-height: 160%;
+				font-family: 'Avenir-Regular';
+			}
+		}
+	}
+}
+
+main{
+}
+
+.high-data{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-height: 560px;
+	max-width: 1117px;
+	background: $background_high-data;
+	border-radius: 50px;
+	margin-top: 100px;
+
+	&__text{
+		max-width: 475px;
+		max-height: 310px;
+
+		margin-left: 62px;
+		&--header{
+			font-family: 'Helvetica-roman';
+			font-size: 40px;
+			line-height: 130%;
+
+			margin-bottom: 40px ;
+		}
+		&--paragraph{
+			max-width: 474px;
+			max-height: 170px;
+			color:  $text-color--aditional;
+			font-family: 'Avenir-Regular';
+			font-size: 18px;
+			line-height: 160%;
+		}
+	}
+}
+
+
+.features{
+text-align: center;
+margin-top: 150px;
+	&--header{
+		font-family: 'Helvetica-roman';
+		font-size: 40px;
+		line-height: 130%;
+	}
+
+	&--paragraph{
+		font-family: 'Avenir-Regular';
+		display: inline-block;
+		max-width: 584px;
+		font-size: 18px;
+		line-height: 160%;
+
+		margin-top: 50px;
+	}
+	&__items{
+		margin-top: 100px;
+		margin-left: auto;
+		margin-right: auto;
+
+		display: grid; 
+		grid-auto-columns: 1fr; 
+		grid-template-columns: 1fr 1fr; 
+		grid-template-rows: 1fr 1fr; 
+		gap: 50px 50px; 
+		grid-template-areas: 
+		  ". ."
+		  ". ."; 
+
+		&--box{
+			max-width: 531px;
+			max-height: 358px;
+			text-align: left;
+			display: flex;
+
+			padding-top: 49px;
+			padding-bottom: 50px;
+		
+			
+			&__title{
+				font-size: 24px;
+				line-height: 130%;
+				font-family: 'Helvetica-roman';
+			}
+
+			&__paragraph{
+				font-family: 'Avenir-Regular';
+				font-size: 16px;
+				line-height: 160%;
+				max-width:220px;
+			}
+			&__link{
+				font-family: 'Helvetica-roman';
+				font-size: 16px;
+				line-height: 160%;
+				color: $text-color;
+			}
+
+			&__img1{
+				max-width:232px;
+				max-height: 211px;
+				padding-top: 20px;
+				margin-right: 30px;
+			}
+			&__img2{
+				max-width:241px;
+				max-height: 185px;
+				padding-top: 20px;
+				margin-right: 30px;
+			}
+			&__img3{
+				max-width: 245px;
+				max-height: 181px;
+				margin-top: 50px;
+				margin-right: 30px;
+			}
+			&__img4{
+				max-width:230px;
+				max-height: 201px;
+				padding-top: 20px;
+				margin-right: 30px;
+			}
+		}
+	  }
+}
+
+
+.text_block{
+	display: flex;
+	flex-direction: column;
+	gap: 20px 0px;
+	justify-content: space-between;
+}
+.feature1_bg{
+	background: url(/assets/images/green_bg.svg) no-repeat right;
+}
+.feature2_bg{
+	background: url(/assets/images/purple_bg.svg) no-repeat right;
+}
+.feature3_bg{
+	background: url(/assets/images/pink_bg.svg) no-repeat right;
+}
+.feature4_bg{
+	background: url(/assets/images/blue.svg) no-repeat right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.testimonials{
+	margin-top: 150px;
+	padding: 109px 0 133px 0;
+	max-width: 1118px;
+	min-height: 709px;
+	background: $button_rgb;
+	border-radius: 50px;
+	position: relative;
+	&__header{
+		position: absolute;
+		font-size: 40px;
+		line-height: 130%;
+		font-family: 'Helvetica-roman';
+		color: $text-color--additional_3;
+		margin: 0 0 0 93px;
+	}
+}
+
+.responce{
+	position: absolute;
+	z-index: 2;
+	top: 246px;
+	left: 21%;
+	max-height: 330px;
+	max-width: 645px;
+
+
+	background: $text-color--additional_3;
+	box-sizing: border-box;
+	box-shadow: 0px 20px 0px rgba(49, 23, 80, 0.3);
+	border-radius: 20px;
+
+	padding: 60px 70px;
+
+	display: grid; 
+	grid-auto-columns: 1fr; 
+	grid-template-columns: 0.6fr 1.4fr; 
+	grid-template-rows: 0.8fr 1.2fr; 
+	gap: 0px 0px; 
+	grid-template-areas: 
+	  "testimonials__box--avatar testimonials__box--title"
+	  ". testimonials__box"; 
+	&__avatar{
+		max-width:90px;
+		max-height: 90px;
+	}
+	&__title{
+		font-family: 'Avenir-Regular';
+		font-weight: 900;
+		font-size: 18px;
+		line-height: 160%;
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 150px;
+		max-height: 51px;
+
+		margin-top: 20px;
+		
+		&--link{
+			font-size: 14px;
+			line-height: 160%;
+			color: $button_rgb
+
+		}
+	}
+	&__paragraph{
+		font-family: 'Avenir-Regular';
+		font-size: 18px;
+		line-height: 180%;
+		color: $text-color;
+
+		max-width: 385px;
+	}
+}
+.testimonials__box--title { grid-area: testimonials__box--title; }
+.testimonials__box--avatar { grid-area: testimonials__box--avatar; }
+.testimonials__box { grid-area: testimonials__box; }
