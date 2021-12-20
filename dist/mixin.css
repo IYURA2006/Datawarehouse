@@ -1,0 +1,73 @@
+@charset "UTF-8";
+.fa-long-arrow-alt-right {
+  color: #9C69E2;
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@font-face {
+  font-family: 'Avenir-Heavy';
+  src: url("../fonts/AvenirNextLTPro-HeavyCn.eot");
+  src: local("☺"), url("../fonts/AvenirNextLTPro-HeavyCn.woff") format("woff"), url("../fonts/AvenirNextLTPro-HeavyCn.ttf") format("truetype"), url("../fonts/AvenirNextLTPro-HeavyCn.svg") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Medium';
+  src: url("../fonts/AvenirNextLTPro-MediumCn.eot");
+  src: local("☺"), url("../fonts/AvenirNextLTPro-MediumCn.woff") format("woff"), url("../fonts/AvenirNextLTPro-MediumCn.ttf") format("truetype"), url("../fonts/AvenirNextLTPro-MediumCn.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Regular';
+  src: url("../fonts/AvenirNextLTPro-Regular.eot");
+  src: local("☺"), url("../fonts/AvenirNextLTPro-Regular.woff") format("woff"), url("../fonts/AvenirNextLTPro-Regular.ttf") format("truetype"), url("../fonts/AvenirNextLTPro-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-bold';
+  src: url("../fonts/aghelveticacyr_bold.eot");
+  src: local("☺"), url("../fonts/aghelveticacyr_bold.woff") format("woff"), url("../fonts/aghelveticacyr_bold.ttf") format("truetype"), url("../fonts/aghelveticacyr_bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-roman';
+  src: url("../fonts/helveticaneuecyr-roman.eot");
+  src: local("☺"), url("../fonts/helveticaneuecyr-roman.woff") format("woff"), url("../fonts/helveticaneuecyr-roman.ttf") format("truetype"), url("../fonts/helveticaneuecyr-roman.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+/*# sourceMappingURL=mixin.css.map */
