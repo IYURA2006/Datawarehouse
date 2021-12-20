@@ -1,0 +1,171 @@
+$background: #E5E5E5;
+$text-color--aditional: #4B5D68;
+$text-color: #212353;
+$text-color--additional_3: #FFFFFF;
+$button_rgb: #9C69E2;
+$background_high-data: rgba(240, 99, 184, 0.15);
+$btn_rgb_2: #F063B8;
+$background_btn_active: #8640e9;
+.fa-long-arrow-alt-right{
+	color:$button_rgb;
+	margin-left: 20px;
+	font-size: 25px;
+}
+$social-button-size: 70px;
+$social-button-icon-size: 0.4;
+$social-button-background: #fff;
+$social-button-active-color: #fff;
+$social-button-transition-time: 0.3s;
+
+$social-button-colors: (
+  'facebook': #3b5999,
+  'twitter': #55acee,
+  'instagram': #e4405f,
+);
+
+@mixin button_white {
+	background: $text-color--additional_3;
+	box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+	border-radius: 50px;
+	padding: 17px 29px;
+	display: flex;
+	align-items: center;
+	transition: all .3s;
+	max-height: 60px;
+	max-width: 210px;
+	&--text{
+		font-family: 'Avenir-Regular';
+		color: $text-color;
+		font-size: 16px;
+		line-height: 160%;
+	}
+	&:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+	&:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	}
+    &:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+	&::after{
+		transform: scaleX(1.4) scaleY(1.6);
+		opacity: 0;
+	}
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@mixin button_rgb {
+	background: $button_rgb;
+	box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+	border-radius: 50px;
+	padding: 16px 37px;
+	max-height: 60px;
+	max-height: 170px;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+	color: $text-color--additional_3;
+	font-size: 18px;
+	line-height: 160%;
+	font-family: "Avenir-Regular";
+	&::after {
+		content: '\279E';
+		position: absolute;
+		opacity: 0;  
+		top: 17px;
+		right: -10px;
+		transition: 0.5s;
+		font-size: 30px;
+		color: $text-color--additional_3;
+	  }
+	&:hover{
+		padding-right: 45px;
+		padding-left:15px;
+	  }
+	  &:active{
+		color: $background;
+		background-color: $background_btn_active;
+
+	}
+	&:hover:after {
+		opacity: 1;
+		right: 10px;
+	  }
+	
+}
+@mixin header {
+    font-family: 'Helvetica-roman';
+	font-size: 40px;
+	line-height: 130%;
+}
+@mixin paragraph {
+    font-size: 18px;
+	line-height: 160%;
+	color: $text-color--aditional;
+	font-family: 'Avenir-Regular';
+    
+}
+
+@font-face {
+	font-family: 'Avenir-Heavy';
+	src: url('../fonts/AvenirNextLTPro-HeavyCn.eot');
+	src: local('☺'), url('../fonts/AvenirNextLTPro-HeavyCn.woff') format('woff'), url('../fonts/AvenirNextLTPro-HeavyCn.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-HeavyCn.svg') format('svg');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Avenir-Medium';
+	src: url('../fonts/AvenirNextLTPro-MediumCn.eot');
+	src: local('☺'), url('../fonts/AvenirNextLTPro-MediumCn.woff') format('woff'), url('../fonts/AvenirNextLTPro-MediumCn.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-MediumCn.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Avenir-Regular';
+	src: url('../fonts/AvenirNextLTPro-Regular.eot');
+	src: local('☺'), url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'), url('../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica-bold';
+	src: url('../fonts/aghelveticacyr_bold.eot');
+	src: local('☺'), url('../fonts/aghelveticacyr_bold.woff') format('woff'), url('../fonts/aghelveticacyr_bold.ttf') format('truetype'), url('../fonts/aghelveticacyr_bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica-roman';
+	src: url('../fonts/helveticaneuecyr-roman.eot');
+	src: local('☺'), url('../fonts/helveticaneuecyr-roman.woff') format('woff'), url('../fonts/helveticaneuecyr-roman.ttf') format('truetype'), url('../fonts/helveticaneuecyr-roman.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}

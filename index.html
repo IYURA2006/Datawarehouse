@@ -11,8 +11,7 @@
     />
     <link rel="stylesheet" href="/dist/reset.css" />
     <link rel="stylesheet" href="/dist/style.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <title>Datawarehouse</title>
   </head>
   <body>
@@ -20,19 +19,21 @@
       <header class="header">
         <nav class="nav">
           <a href="#" class="nav__logo">
-            <img src="/assets/images/Logo.svg" alt="logo" srcset="" />
+            <img src="/assets/images/Logo.svg" alt="logo" />
           </a>
           <a href="#" class="nav__links active-page">About</a>
           <a href="#" class="nav__links">Help</a>
           <a href="#" class="nav__links">Features</a>
           <a href="#" class="nav__links">Signup</a>
 
-          <button class="nav__button white_button">
-            <a href="#" class="white_button--text"
-              >Request Demo
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </a>
-          </button>
+          <div class="nav__button white_button">
+            <a href="#" class="nav__button--text">Request Demo </a>
+            <img
+              src="/assets/images/arrow_btn.png"
+              class="nav__button--arrow"
+              alt="purple__arrow"
+            />
+          </div>
         </nav>
 
         <div class="header__text">
@@ -42,15 +43,13 @@
             security, so you can store your data here safely but not be afraid
             of being stolen by others.
           </p>
-          <button class="header__text--button">
-            <a href="#" class="header__text--button--text">Learn more</a>
-          </button>
+          <a href="#" class="header__text--button"> Learn more </a>
         </div>
       </header>
 
       <main class="main">
         <div class="high-data">
-          <img src="/assets/images/high-data.png" alt="profits" srcset="" />
+          <img src="/assets/images/high-data.png" alt="profits" />
 
           <div class="high-data__text">
             <h2 class="high-data__text--header">
@@ -80,7 +79,6 @@
                 src="/assets/images/search_data.png"
                 class="features__items--box__img1"
                 alt="search_data"
-                srcset=""
               />
 
               <div class="text_block">
@@ -91,66 +89,85 @@
                   to find data effectively saving time.
                 </p>
 
-                <a href="#" class="features__items--box__link">Learn more</a>
+                <a href="#" class="features__items--box__link"
+                  >Learn more
+                  <img
+                    src="/assets/images/arrow_btn.png"
+                    class="nav__button--arrow"
+                    alt="purple__arrow"
+                /></a>
               </div>
             </div>
 
             <div class="features__items--box feature2_bg">
               <img
-                src="/assets/images/print_out.png"
+                src="/assets/images/access.png"
                 class="features__items--box__img2"
                 alt="print_out"
-                srcset=""
               />
-              
+
               <div class="text_block">
-                <h3 class="features__items--box__title">Print Out</h3>
+                <h3 class="features__items--box__title">24 Hours Access</h3>
                 <p class="features__items--box__paragraph">
                   Print out service gives you convenience if someday you need
                   print data, just edit it all and just print it.
                 </p>
 
-                <a href="#" class="features__items--box__link">Learn more</a>
+                <a href="#" class="features__items--box__link"
+                  >Learn more
+                  <img
+                    src="/assets/images/arrow_btn.png"
+                    class="nav__button--arrow"
+                    alt="purple__arrow"
+                /></a>
               </div>
             </div>
 
             <div class="features__items--box feature3_bg">
               <img
-                src="/assets/images/security_code.png"
+                src="/assets/images/print_out.png"
                 class="features__items--box__img3"
                 alt="security_code"
-                srcset=""
               />
 
               <div class="text_block">
-              <h3 class="features__items--box__title">Security Code</h3>
-              <p class="features__items--box__paragraph">
-                Data Security is one of our best facilities. Allows for your
-                files to be safer. The file can be secured with a code or
-                password that you created, so only you can open the file.
-              </p>
+                <h3 class="features__items--box__title">Print Out</h3>
+                <p class="features__items--box__paragraph">
+                  Data Security is one of our best facilities. Allows for your
+                  files to be safer. The file can be secured with a code or
+                  password that you created, so only you can open the file.
+                </p>
 
-              <a href="#" class="features__items--box__link">Learn more</a>
+                <a href="#" class="features__items--box__link"
+                  >Learn more
+                  <img
+                    src="/assets/images/arrow_btn.png"
+                    class="nav__button--arrow"
+                    alt="purple__arrow"
+                /></a>
               </div>
             </div>
 
             <div class="features__items--box feature4_bg">
               <img
-                src="/assets/images/access.png"
+                src="/assets/images/security_code.png"
                 class="features__items--box__img4"
                 alt="access"
-                srcset=""
               />
               <div class="text_block">
-              <h3 class="features__items--box__title">24 Hours Access</h3>
-              <p class="features__items--box__paragraph">
-                Access is given 24 hours a full morning to night and meet again
-                in the morning, giving you comfort when you need data when
-                urgent.
-              </p>
+                <h3 class="features__items--box__title">Security Code</h3>
+                <p class="features__items--box__paragraph">
+                  Access is given 24 hours a full morning to night and meet
+                  again in the morning, giving you comfort when you need data
+                  when urgent.
+                </p>
 
-              <a href="#" class="features__items--box__link">Learn more</a>
-
+                <a href="#" class="features__items--box__link"
+                  >Learn more<img
+                    src="/assets/images/arrow_btn.png"
+                    class="nav__button--arrow"
+                    alt="purple__arrow"
+                /></a>
               </div>
             </div>
           </div>
@@ -164,7 +181,6 @@
               src="/assets/images/testinomals-avatar.png"
               class="responce__avatar"
               alt="man_photo"
-              srcset=""
             />
             <h4 class="responce__title">
               John Fang
@@ -183,6 +199,83 @@
           </div>
         </div>
       </main>
+    </div>
+    <div class="line"></div>
+    <div class="wrapper">
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__text">
+            <h2 class="footer__text--header">Try for free!</h2>
+            <p class="footer__text--paragraph">
+              Get limited 1 week free try our features!
+            </p>
+          </div>
+          <div class="footer__button">Learn more</div>
+          <div class="footer__button_white white_button">
+            <a href="#" class="nav__button--text">Request Demo </a>
+            <img
+              src="/assets/images/arrow_btn.png"
+              class="nav__button--arrow"
+              alt="purple__arrow"
+            />
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom--logo">
+            <img
+              src="/assets/images/Logo.svg"
+              class="footer__bottom--logo__img"
+              alt="logo"
+              srcset=""
+            />
+            <h3 class="footer__bottom--logo__header">DataWarehouse</h3>
+          </div>
+        <h4 class="footer__bottom--header">About</h4>
+        <h4 class="footer__bottom--header">Help</h4>
+        <h4 class="footer__bottom--header">Social Media</h4>
+
+        <div class="footer__bottom--info">
+          <a
+            href="https://www.google.com/maps/place/The+Warehouse/@51.4534203,-0.983,13z/data=!4m9!1m2!2m1!1sWarehouse+Society!3m5!1s0x48769b33bfa93b87:0x5f5733a22d29702f!8m2!3d51.4534366!4d-0.9494026!15sChFXYXJlaG91c2UgU29jaWV0eZIBEGNvbW11bml0eV9jZW50ZXI"
+            class="footer__bottom--info__location"
+            >Warehouse Society, 234 <br> Bahagia Ave Street PRBW 29281
+          </a>
+          <a href="tel:+1-232-3434" class="footer__bottom--info__phone" >info@warehouse.project <br>
+            1-232-3434 (Main)</a>
+        </div>
+
+        <div class="footer__bottom--links">
+          <ul>
+            <li ><a href="#" class="footer__bottom--links__li">Profile</a></li>
+            <li ><a href="#" class="footer__bottom--links__li">Features</a></li>
+            <li ><a href="#" class="footer__bottom--links__li">Careers</a></li>
+            <li ><a href="#" class="footer__bottom--links__li">DW News</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__bottom--links">
+          <ul>
+            <li ><a href="#" class="footer__bottom--links__li" >Support</a></li>
+            <li ><a href="#" class="footer__bottom--links__li">Sign up</a></li>
+            <li ><a href="#" class="footer__bottom--links__li">Guide</a></li>
+            <li ><a href="#" class="footer__bottom--links__li">Reports</a></li>
+            <li ><a href="#" class="footer__bottom--links__li">Q&A</a></li>
+          </ul>
+        </div>
+
+        <div class="social-buttons">
+          <a href="https://www.facebook.com/volodymyr.viatrovych" class="social-buttons__button social-button social-button--facebook" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/zelenskiy_official/?hl=uk" class="social-buttons__button social-button social-button--twitter" aria-label="LinkedIn">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/zelenskiy_official/?hl=uk" class="social-buttons__button social-button social-button--instagram" aria-label="SnapChat">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      </footer>
     </div>
   </body>
 </html>
